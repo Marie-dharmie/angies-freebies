@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Angie's Freebies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas"></canvas>
+      <div id="screen-flash" aria-hidden="true"></div>
+
+      <div id="ui">
+        <div id="hud" class="hidden">
+          <div class="hud-top">
+            <div class="hud-chip" id="score-chip">Friends: <span id="score">0</span></div>
+            <div class="hud-chip" id="streak-chip">Streak: <span id="streak">0</span></div>
+            <div class="hud-chip" id="status-chip">Shield: OFF</div>
+            <button type="button" id="mute-btn" class="hud-btn" aria-label="Toggle mute">Sound</button>
+          </div>
+          <div id="incoming" class="incoming hidden">
+            <span class="incoming-label">coming up</span>
+            <span id="incoming-name" class="incoming-name"></span>
+          </div>
+          <div id="big-callout" class="big-callout hidden"></div>
+          <div id="toast" class="toast hidden"></div>
+          <div id="planet-label" class="planet-label hidden"></div>
+          <div id="roster" class="roster" aria-label="Collected friends"></div>
+        </div>
+
+        <div id="intro-screen" class="intro-screen">
+          <video
+            id="intro-video-bg"
+            class="intro-video-bg"
+            src="/media/final-transmission.mp4"
+            playsinline
+            muted
+            loop
+            preload="auto"
+            aria-hidden="true"
+          ></video>
+          <video
+            id="intro-video"
+            class="intro-video-bleed"
+            src="/media/final-transmission.mp4"
+            playsinline
+            webkit-playsinline
+            preload="auto"
+            controls
+            controlslist="nodownload"
+          ></video>
+          <div class="intro-overlay">
+            <p class="eyebrow">for Angelina</p>
+            <h1>Angie's Freebies</h1>
+            <p class="tagline">Catch as much free stuff as possible</p>
+            <p class="hint">grab friends, dodge the bombs</p>
+            <div class="intro-actions">
+              <button type="button" id="intro-play-btn" class="cta">Play transmission</button>
+              <button type="button" id="intro-continue-btn" class="cta secondary">Start gathering</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="title-screen" class="panel hidden">
+          <p class="eyebrow">okay ready?</p>
+          <h1>Angie's Freebies</h1>
+          <p class="tagline">Catch as much free stuff as possible</p>
+          <p class="hint desktop-only">WASD / arrows · grab friends · dodge bombs (they steal a friend)</p>
+          <p class="hint mobile-only">tilt or drag · grab friends · dodge bombs (they steal a friend)</p>
+          <button type="button" id="start-btn" class="cta">let’s go</button>
+        </div>
+
+        <div id="finale-screen" class="panel hidden">
+          <p class="eyebrow">hey you</p>
+          <h2 id="finale-heading">Happy birthday</h2>
+          <ul id="forgotten-list" class="forgotten-list"></ul>
+          <p id="finale-loot" class="loot-line"></p>
+          <p id="finale-message" class="letter"></p>
+          <button type="button" id="replay-btn" class="cta secondary">play again</button>
+        </div>
+
+        <div id="touch-stick" class="touch-stick hidden" aria-hidden="true">
+          <div class="stick-base">
+            <div class="stick-knob" id="stick-knob"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
