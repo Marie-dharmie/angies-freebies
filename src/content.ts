@@ -4,16 +4,17 @@ export const content = {
   title: "Angie's Freebies",
   mission: 'Catch as much free stuff as possible',
 
-  helmetPhoto: '/media/angie-face.jpg',
+  // Relative paths so GitHub Pages (/angies-freebies/) works
+  helmetPhoto: './media/angie-face.jpg',
 
   planetPhotos: [
-    { src: '/media/planet-1.jpg', name: 'Planet Nap' },
-    { src: '/media/planet-2.jpg', name: 'Planet Snack' },
-    { src: '/media/planet-3.jpg', name: 'Planet Chaos' },
+    { src: './media/planet-1.jpg', name: 'Planet Nap' },
+    { src: './media/planet-2.jpg', name: 'Planet Snack' },
+    { src: './media/planet-3.jpg', name: 'Planet Chaos' },
   ],
 
   introVideo: {
-    src: '/media/final-transmission.mp4',
+    src: './media/final-transmission.mp4',
     caption: 'Final transmission',
   },
 
