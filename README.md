@@ -18,3 +18,5 @@ After you push to GitHub and Pages finishes deploying, the game will be at:
 ## Deploy again
 
 Just push to `main`. GitHub Actions rebuilds and updates the site automatically.
+
+# Deployed via gh-pages branch instead
